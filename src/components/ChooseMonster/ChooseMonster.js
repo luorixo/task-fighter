@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 
+// hello
 function ChooseMonster() {
-  return (
-    <div>ChooseMonster</div>
-  )
+  return <div>ChooseMonster</div>;
 }
 
-export default ChooseMonster
+export default ChooseMonster;
