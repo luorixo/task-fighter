@@ -2,7 +2,7 @@ import React from 'react'
 
 function HealthBar() {
   return (
-    <div>HealthBar</div>
+    <div>HealthBars</div>
   )
 }
 
