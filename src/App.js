@@ -7,10 +7,10 @@ import Particles from './components/Particles/Particles';
 function App() {
   return (
     <>
-      <ChooseMonster />
-      <HealthBar />
-      <TaskBar />
-      <Particles />
+      <ChooseMonster/>
+      <HealthBar/>
+      <TaskBar/>
+      <Particles/>
     </>
   );
 }
