@@ -2,7 +2,7 @@ import React from 'react'
 
 function TaskBar() {
   return (
-    <div>TaskBar</div>
+    <div>TaskBars</div>
   )
 }
 
