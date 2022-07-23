@@ -1,0 +1,57 @@
+.text-container {
+  margin: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 4.2vw;
+  display: flex;
+  padding: 1vw 2vw;
+  background-color: rgba(223, 222, 222, 0.5);
+  color: rgb(40, 107, 40);
+  border-radius: 5vw;
+  margin-bottom: 2vh;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5vw 2vw;
+}
+
+.badge-icon {
+  background-color: rgba(223, 222, 222, 0.5);
+  border-radius: 12.5vw;
+  box-sizing: border-box;
+  padding: 3vw;
+  margin: 2vh auto;
+  height: 25vw;
+}
+
+.message-container h2 {
+  background-color: rgba(223, 222, 222, 0.5);
+  border-radius: 2vw;
+  padding: 1.1vw 1vw;
+  font-size: 3vw;
+  color: rgb(76, 76, 76);
+}
+
+.replay-button {
+  border: none;
+  background-color: rgba(255, 106, 0, 0.7);
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 2.5vh;
+  padding: 1.5vh;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.replay-button:hover {
+  transform: scale(1.075);
+}
