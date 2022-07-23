@@ -13,6 +13,7 @@ function TaskBar() {
 
   const submitTodoHandler = (e) =>{
     e.preventDefault();
+    console.log(todos.length);
     if(inputText !== ""){
       setTodos([
         ...todos, {text: inputText, completed: false, id: Math.random()*1000}
