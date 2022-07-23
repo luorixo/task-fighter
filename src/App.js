@@ -1,8 +1,10 @@
 import './App.css';
 import ChooseMonster from './components/ChooseMonster/ChooseMonster';
-import HealthBar from './components/HealthBar/HealthBar';'./components/HealthBar/HealthBar';
+import HealthBar from './components/HealthBar/HealthBar';
 import TaskBar from './components/TaskBar/TaskBar';
-import Particles from './components/Particles/Particles';
+import LeafParticles from './components/Particles/LeafParticles';
+import RainParticles from './components/Particles/RainParticles';
+import SmokeParticles from './components/Particles/SmokeParticles';
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <ChooseMonster/>
       <HealthBar/>
       <TaskBar/>
-      <Particles/>
+      <SmokeParticles/>
     </>
   );
 }
