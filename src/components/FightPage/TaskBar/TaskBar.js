@@ -1,30 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './tasksbar.css';
 import Todo from './Todo';
 
-function TaskBar() {
-  const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
-
-  const inputTextHandler = (e) =>{
-    console.log(e.target.value);
-    setInputText(e.target.value);
-  };
-
-  const submitTodoHandler = (e) =>{
-    e.preventDefault();
-    if(inputText !== ""){
-      setTodos([
-        ...todos, {text: inputText, completed: false, id: Math.random()*1000}
-      ])
-      setInputText("");
-    }
-  };
-
-  const deleteHandler = () => {
-    todos.map(todo => setTodos(todos.filter((el) => el.id !== todos.todo.id)))
-  };
-
+function TaskBar({inputText, inputTextHandler, submitTodoHandler, todos, setTodos}) {
   
     return (
     <>

@@ -40,7 +40,24 @@ function FightPage() {
     /* END OF HEALTHBAR FUNCTIONS */
 
     /* START OF TASKBAR FUNCTIONS */
+    
+    const [todos, setTodos] = useState([]);
+    const [inputText, setInputText] = useState("");
 
+    const inputTextHandler = (e) =>{
+        console.log(e.target.value);
+        setInputText(e.target.value);
+    };
+
+    const submitTodoHandler = (e) =>{
+        e.preventDefault();
+        if(inputText !== ""){
+        setTodos([
+            ...todos, {text: inputText, completed: false, id: Math.random()*1000}
+        ])
+        setInputText("");
+        }
+    };
 
     /* END OF TASKBAR FUNCTIONS */
 
@@ -50,9 +67,15 @@ function FightPage() {
                 health={health}
                 CompleteTask={CompleteTask}
                 AddTask={AddTask}
-                />
+            />
 
-            <TaskBar />
+            <TaskBar
+                inputText={inputText}
+                inputTextHandler={inputTextHandler}
+                submitTodoHandler={submitTodoHandler}
+                todos={todos}
+                setTodos={setTodos}
+            />
         </>
   )
 }
