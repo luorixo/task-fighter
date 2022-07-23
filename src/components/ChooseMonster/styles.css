@@ -1,7 +1,7 @@
-.mainContainer {
+.box-container {
   display: flex;
   justify-content: space-between;
-  margin: 150px;
+  margin: 1vw 10vw 1vw 10vw;
 }
 
 .box-section-1,
@@ -57,4 +57,15 @@
   color: rgb(71, 71, 71);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6vw;
 }
