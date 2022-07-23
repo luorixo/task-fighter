@@ -3,9 +3,9 @@ import "./styles.css";
 import monsterOne from "./images/monster1.png";
 import monsterTwo from "./images/monster2.png";
 import monsterThree from "./images/monster3.png";
-import monsterOneGIF from "./images/monster1.gif";
-import monsterTwoGIF from "./images/monster2.gif";
-import monsterThreeGIF from "./images/monster3.gif";
+import monsterOneGIF from "./images/monster1.GIF";
+import monsterTwoGIF from "./images/monster2.GIF";
+import monsterThreeGIF from "./images/monster3.GIF";
 
 function ChooseMonster() {
   return (
