@@ -1,0 +1,41 @@
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section,
+.right-section,
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1vh 2vh 8vh 2vh;
+  margin: 4vh 2vh;
+
+  border: none;
+  border-radius: 4vw;
+
+  background-color: rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+
+  transition: transform 0.25s ease-in;
+}
+
+.left-section:hover,
+.right-section:hover,
+.middle-section:hover {
+  transform: scale(1.075);
+}
+
+.monster-image {
+  width: 25vw;
+}
+
+.title {
+  text-align: center;
+  margin: 4vh auto;
+  font-size: 4vh;
+}
