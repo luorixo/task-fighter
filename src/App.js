@@ -1,16 +1,13 @@
 import './App.css';
-import ChooseMonster from './components/ChooseMonster/ChooseMonster';
-import HealthBar from './components/HealthBar/HealthBar';
-import TaskBar from './components/TaskBar/TaskBar';
-import Particles from './components/Particles/Particles';
+import FightPage from './components/FightPage/FightPage';
+import LandingPage from './components/LandingPage/LandingPage';
 
 function App() {
+  
   return (
     <>
-      <ChooseMonster/>
-      <HealthBar/>
-      <TaskBar/>
-      <Particles/>
+      <LandingPage />
+      <FightPage />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { LinearProgress } from '@mui/material';
-import { linearProgressClasses } from '@mui/material/LinearProgress';
+import { linearProgressClasses } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Button } from '@mui/material';
 

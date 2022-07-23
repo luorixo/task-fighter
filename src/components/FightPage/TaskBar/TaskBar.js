@@ -1,31 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './tasksbar.css';
 import Todo from './Todo';
 import { motion } from "framer-motion";
 
-function TaskBar() {
-  const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
-
-  const inputTextHandler = (e) =>{
-    console.log(e.target.value);
-    setInputText(e.target.value);
-  };
-
-  const submitTodoHandler = (e) =>{
-    e.preventDefault();
-    console.log(todos.length);
-    if(inputText !== ""){
-      setTodos([
-        ...todos, {text: inputText, completed: false, id: Math.random()*1000}
-      ])
-      setInputText("");
-    }
-  };
-
-  const deleteHandler = () => {
-    todos.map(todo => setTodos(todos.filter((el) => el.id !== todos.todo.id)))
-  };
+function TaskBar({inputText, inputTextHandler, submitTodoHandler, todos, setTodos, CompleteTask, noFirstTask, setNumOfTasks, numOfTasks}) {
+  
     return (
     <>
     <nav className="navbar">
@@ -50,6 +29,10 @@ function TaskBar() {
                 key = {todo.id}
                 todo = {todo}
                 text = {todo.text}
+                CompleteTask = {CompleteTask}
+                noFirstTask = {noFirstTask}
+                setNumOfTasks = {setNumOfTasks}
+                numOfTasks = {numOfTasks}
                 />
             ))}
           </div>
