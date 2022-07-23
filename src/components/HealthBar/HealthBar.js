@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import LinearProgress from '@mui/material/LinearProgress';
+import { LinearProgress } from '@mui/material';
+import { linearProgressClasses } from '@mui/material/LinearProgress';
+import { styled } from '@mui/material/styles';
 import { Button } from '@mui/material';
 
 function HealthBar() {
@@ -9,20 +11,52 @@ function HealthBar() {
     const [health, setHealth] = useState(100);
     
     // decreases health
-    function Attack(){
-        setHealth(health - 10)
+    function Attack(increment){
+        if (health > 0){ 
+            setHealth(health - increment)
+        }
     }
 
     // the health of the monster regenerates
-    function MonsterRegen(){
-        setHealth(health + 10)
+    function MonsterRegen(increment){
+        if (health < 100){
+            setHealth(health + increment)
+        }
     }
+
+    function progressBarColour() {
+        if (health > 70){
+            return 'lime'
+
+        } else if (health > 50){
+            return 'orange'
+
+        } else if (health > 30){
+            return 'orange'
+
+        } else {
+            return 'red'
+        }
+    }
+
+    // STYLING
+    const StyledHealthBar = styled(LinearProgress)(() => ({
+        width: '50%',
+        height: '1vw',
+        backgroundColor: 'grey',
+        border: 'solid 1px black',
+        borderRadius: '25px',
+        [`& .${linearProgressClasses.bar}`]: {
+            backgroundColor: progressBarColour()
+        },
+        
+    }));
 
     return (
         <>
-            <LinearProgress variant='determinate' value={health} />
-            <Button variant='outlined' onClick={() => Attack()}>ATTACK</Button>
-            <Button variant='outlined' onClick={() => MonsterRegen()}>MONSTER</Button>
+            <StyledHealthBar variant='determinate' value={health}/>
+            <Button variant='outlined' onClick={() => Attack(10)}>ATTACK</Button>
+            <Button variant='outlined' onClick={() => MonsterRegen(10)}>MONSTER</Button>
         </>
   )
 }
