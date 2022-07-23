@@ -6,27 +6,32 @@ import { styled } from '@mui/material/styles';
 import { Button } from '@mui/material';
 
 function HealthBar() {
-
-    // initiate health levels and increment
+    const [noFirstTask, setFirstTask] = useState(true);
+    const [numOfTasks, setNumOfTasks] = useState(0);
     const [health, setHealth] = useState(100);
-    const [increment, setIncrement] = useState(10); //TODO: NEED TO INITIATE, AND FIND OUT NUMBER OF TASKS
 
-    // decreases health
+    function CompleteTask(){
+        if (numOfTasks !== 0 && !noFirstTask){
+            setNumOfTasks(numOfTasks - 1);
+        }
+        Attack((noFirstTask) ? 0 : (health / numOfTasks));
+    }
+
+    // decreases health.
     function Attack(inc){
+
         if (health > 0){ 
             setHealth(health - inc)
         }
     }
 
-    // the health of the monster regenerates
-    function MonsterRegen(inc){
+    function AddTask(){
 
-        // updating increment
-        // setIncrement(health);
-
-        if (health < 100){
-            setHealth(health + inc)
+        if (noFirstTask) {
+            setFirstTask(false);
         }
+        
+        setNumOfTasks(numOfTasks + 1);
     }
 
     function progressBarColour() {
@@ -59,9 +64,9 @@ function HealthBar() {
 
     return (
         <>
-            <StyledHealthBar variant='determinate' value={health}/>
-            <Button variant='outlined' onClick={() => Attack(increment)}>ATTACK</Button>
-            <Button variant='outlined' onClick={() => MonsterRegen(increment)}>MONSTER</Button>
+            <StyledHealthBar variant='determinate' value={health}/> 
+            <Button variant='outlined' onClick={() => CompleteTask()}>ATTACK</Button>
+            <Button variant='outlined' onClick={() => AddTask()}>ADD TASK</Button>
         </>
   )
 }
