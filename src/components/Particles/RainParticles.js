@@ -12,8 +12,12 @@ const ParticlesComponent = (props) => {
     // all options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
     return {
       background: {
+        image: "url('https://github.com/luorixo/portfolio/blob/main/client/src/assets/Images/background2.JPG?raw=true')",
+        size: "cover",
         color: "#000", // this sets a background color for the canvas
         opacity: 1,
+        repeat: "no-repeat",
+        position: "50% 50%",
       },   
       
       fullScreen: {

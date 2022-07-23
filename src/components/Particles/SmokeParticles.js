@@ -12,8 +12,12 @@ const ParticlesComponent = (props) => {
     // all options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
     return {
       background: {
-        color: "#555", // this sets a background color for the canvas
-        opacity: 0.5,
+        image: "url('https://github.com/luorixo/portfolio/blob/main/client/src/assets/Images/background3.JPG?raw=true')",
+        size: "cover",
+        color: "#000", // this sets a background color for the canvas
+        opacity: 1,
+        repeat: "no-repeat",
+        position: "50% 50%",
       },   
       
       fullScreen: {
@@ -47,7 +51,7 @@ const ParticlesComponent = (props) => {
             enable: true,
             area: 800,
           },
-          value: 8,
+          value: 10,
         },
         shape: {
           type: 'image',
@@ -64,13 +68,13 @@ const ParticlesComponent = (props) => {
           random: false,
           straight: true,
           out_mode: 'out',
-          speed: { min: 2, max: 5 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
+          speed: { min: 1, max: 4 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
         },
         opacity: {
-          value: { min: 0.1, max: 0.3 }, // using a different opacity, to have some semitransparent effects
+          value: { min: 0.2, max: 0.4 }, // using a different opacity, to have some semitransparent effects
         },
         size: {
-          value: { min: 100, max: 200 }, // let's randomize the particles size a bit
+          value: { min: 120, max: 260 }, // let's randomize the particles size a bit
         },
         
       },
