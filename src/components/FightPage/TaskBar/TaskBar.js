@@ -24,6 +24,8 @@ function TaskBar() {
   const deleteHandler = () => {
     todos.map(todo => setTodos(todos.filter((el) => el.id !== todos.todo.id)))
   };
+
+  
     return (
     <>
       <form>
