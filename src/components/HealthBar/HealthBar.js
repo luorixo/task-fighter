@@ -9,7 +9,7 @@ function HealthBar() {
 
     // initiate health levels and increment
     const [health, setHealth] = useState(100);
-    const [increment, setIncrement] = useState(); //TODO: NEED TO INITIATE, AND FIND OUT NUMBER OF TASKS
+    const [increment, setIncrement] = useState(10); //TODO: NEED TO INITIATE, AND FIND OUT NUMBER OF TASKS
 
     // decreases health
     function Attack(inc){
@@ -22,7 +22,7 @@ function HealthBar() {
     function MonsterRegen(inc){
 
         // updating increment
-        setIncrement(health);
+        // setIncrement(health);
 
         if (health < 100){
             setHealth(health + inc)
