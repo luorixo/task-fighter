@@ -13,7 +13,6 @@ function App() {
       <LandingPage/>
       <HealthBar/>
       <TaskBar/>
-      <LeafParticles/>
     </>
   );
 }
