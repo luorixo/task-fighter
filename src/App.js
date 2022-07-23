@@ -1,14 +1,13 @@
 import './App.css';
-import ChooseMonster from './components/ChooseMonster/ChooseMonster';
 import FightPage from './components/FightPage/FightPage';
-import Particles from './components/Particles/Particles';
+import LandingPage from './components/LandingPage/LandingPage';
 
 function App() {
+  
   return (
     <>
-      <ChooseMonster/>
+      <LandingPage />
       <FightPage />
-      <Particles/>
     </>
   );
 }
