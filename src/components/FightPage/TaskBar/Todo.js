@@ -1,4 +1,4 @@
-function Todo({todo, todos, setTodos}) {
+function Todo({todo, todos, setTodos, CompleteTask}) {
     const deleteHandler = () => {
         setTodos(todos.filter((el) => el.id !== todo.id));
     };
@@ -12,6 +12,9 @@ function Todo({todo, todos, setTodos}) {
             }
             return item;
         }))
+
+        // connecting to health bar
+        CompleteTask();
     };
 
   return (

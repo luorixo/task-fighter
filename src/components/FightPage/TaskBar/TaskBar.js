@@ -2,7 +2,7 @@ import React from 'react';
 import './tasksbar.css';
 import Todo from './Todo';
 
-function TaskBar({inputText, inputTextHandler, submitTodoHandler, todos, setTodos}) {
+function TaskBar({inputText, inputTextHandler, submitTodoHandler, todos, setTodos, CompleteTask}) {
   
     return (
     <>
@@ -21,6 +21,7 @@ function TaskBar({inputText, inputTextHandler, submitTodoHandler, todos, setTodo
                 key = {todo.id}
                 todo = {todo}
                 text = {todo.text}
+                CompleteTask = {CompleteTask}
                 />
             ))}
           </ul>

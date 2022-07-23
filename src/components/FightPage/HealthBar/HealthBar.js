@@ -2,9 +2,8 @@ import React from 'react'
 import { LinearProgress } from '@mui/material';
 import { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material/styles';
-import { Button } from '@mui/material';
 
-function HealthBar({health, CompleteTask, AddTask}) {
+function HealthBar({health}) {
 
     function ProgressBarColour() {
         if (health > 70){
@@ -36,9 +35,7 @@ function HealthBar({health, CompleteTask, AddTask}) {
 
     return (
         <>
-            <StyledHealthBar variant='determinate' value={health}/> 
-            <Button variant='outlined' onClick={() => CompleteTask()}>ATTACK</Button>
-            <Button variant='outlined' onClick={() => AddTask()}>ADD TASK</Button>
+            <StyledHealthBar variant='determinate' value={health}/>
         </>
   )
 }

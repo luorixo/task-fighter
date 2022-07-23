@@ -21,21 +21,10 @@ function FightPage() {
 
     // decreases health.
     function Attack(inc){
-
         if (health > 0){ 
             setHealth(health - inc)
         }
     }
-
-    function AddTask(){
-
-        if (noFirstTask) {
-            setFirstTask(false);
-        }
-        
-        setNumOfTasks(numOfTasks + 1);
-    }
-
  
     /* END OF HEALTHBAR FUNCTIONS */
 
@@ -56,6 +45,13 @@ function FightPage() {
             ...todos, {text: inputText, completed: false, id: Math.random()*1000}
         ])
         setInputText("");
+
+        if (noFirstTask) {
+            setFirstTask(false);
+        }
+        
+        setNumOfTasks(numOfTasks + 1);
+
         }
     };
 
@@ -65,8 +61,6 @@ function FightPage() {
         <>
             <HealthBar 
                 health={health}
-                CompleteTask={CompleteTask}
-                AddTask={AddTask}
             />
 
             <TaskBar
@@ -75,6 +69,7 @@ function FightPage() {
                 submitTodoHandler={submitTodoHandler}
                 todos={todos}
                 setTodos={setTodos}
+                CompleteTask={CompleteTask}
             />
         </>
   )
