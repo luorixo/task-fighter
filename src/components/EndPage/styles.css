@@ -1,0 +1,94 @@
+.text-container {
+  margin: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 4.2vw;
+  display: flex;
+  padding: 1vw 2vw;
+  background-color: rgba(223, 222, 222, 0.3);
+  color: rgb(40, 107, 40);
+  border-radius: 5vw;
+  margin-bottom: 2vh;
+  width: 50%;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5vw 2vw;
+  animation: 1.2s fade ease 1.5s infinite;
+}
+
+.badge-icon {
+  background-color: rgba(223, 222, 222, 0.3);
+  border-radius: 12.5vw;
+  box-sizing: border-box;
+  height: 25vw;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.65;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.message-container h2 {
+  margin: 3vh auto;
+  background-color: rgba(223, 222, 222, 0.3);
+  border-radius: 3vw;
+  padding: 1vw 1.5vw;
+  font-size: 2.5vw;
+  color: #fff;
+}
+
+.replay-button {
+  border: none;
+  background-color: rgba(255, 106, 0, 0.7);
+  color: #fff;
+  border-radius: 6vh;
+  font-weight: 600;
+  font-size: 2.5vh;
+  padding: 1.5vh;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.replay-button:hover {
+  transform: scale(1.075);
+}
