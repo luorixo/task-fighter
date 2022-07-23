@@ -1,6 +1,9 @@
-function Todo({text, todo, todos, setTodos}) {
+function Todo({todo, todos, setTodos, CompleteTask, noFirstTask, numOfTasks, setNumOfTasks}) {
     const deleteHandler = () => {
         setTodos(todos.filter((el) => el.id !== todo.id));
+        if (!noFirstTask){
+            setNumOfTasks(numOfTasks - 1);
+        }
     };
     const completeHandler = () => {
         setTodos(todos.map((item) => {
@@ -12,6 +15,9 @@ function Todo({text, todo, todos, setTodos}) {
             }
             return item;
         }))
+
+        // connecting to health bar
+        CompleteTask();
     };
 
   return (
