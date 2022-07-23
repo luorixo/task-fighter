@@ -70,6 +70,9 @@ function FightPage() {
                 todos={todos}
                 setTodos={setTodos}
                 CompleteTask={CompleteTask}
+                noFirstTask={noFirstTask}
+                setNumOfTasks={setNumOfTasks}
+                numOfTasks={numOfTasks}
             />
         </>
   )

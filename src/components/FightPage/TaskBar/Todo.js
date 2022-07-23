@@ -1,6 +1,9 @@
-function Todo({todo, todos, setTodos, CompleteTask}) {
+function Todo({todo, todos, setTodos, CompleteTask, noFirstTask, numOfTasks, setNumOfTasks}) {
     const deleteHandler = () => {
         setTodos(todos.filter((el) => el.id !== todo.id));
+        if (!noFirstTask){
+            setNumOfTasks(numOfTasks - 1);
+        }
     };
     const completeHandler = () => {
         setTodos(todos.map((item) => {
