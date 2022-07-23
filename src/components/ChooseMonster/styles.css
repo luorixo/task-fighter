@@ -1,41 +1,60 @@
 .mainContainer {
   display: flex;
   justify-content: space-between;
+  margin: 150px;
 }
 
-.left-section,
-.right-section,
-.middle-section {
+.box-section-1,
+.box-section-2,
+.box-section-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  padding: 1vh 2vh 8vh 2vh;
-  margin: 4vh 2vh;
-
+  padding: 20px 0;
+  margin: 10px;
   border: none;
-  border-radius: 4vw;
-
+  border-radius: 6vh;
   background-color: rgba(0, 0, 0, 0.1);
-
   cursor: pointer;
-
   transition: transform 0.25s ease-in;
 }
 
-.left-section:hover,
-.right-section:hover,
-.middle-section:hover {
+.box-section-1:hover #monster-1-gif,
+.box-section-2:hover #monster-2-gif,
+.box-section-3:hover #monster-3-gif {
+  display: block;
+}
+
+.box-section-1:hover #monster-1,
+.box-section-2:hover #monster-2,
+.box-section-3:hover #monster-3 {
+  display: none;
+}
+
+#monster-1-gif,
+#monster-2-gif,
+#monster-3-gif {
+  display: none;
+  z-index: 99;
+}
+
+.box-section-1:hover,
+.box-section-2:hover,
+.box-section-3:hover {
   transform: scale(1.075);
 }
 
-.monster-image {
+.monster-image,
+.monster-gif {
   width: 25vw;
 }
 
 .title {
   text-align: center;
-  margin: 4vh auto;
-  font-size: 4vh;
+  font-size: 4vw;
+  font-weight: 600;
+  color: rgb(71, 71, 71);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
