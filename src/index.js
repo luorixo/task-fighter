@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FightPage from './components/FightPage/FightPage';
 import LandingPage from './components/LandingPage/LandingPage';
+import EndPage from './components/EndPage/EndPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/fight" element={<FightPage />} />
+      <Route path="/win" element={<EndPage />} />
     </Routes>
   </BrowserRouter>
 );
