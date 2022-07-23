@@ -2,6 +2,7 @@ import React from 'react'
 import { LinearProgress } from '@mui/material';
 import { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material/styles';
+import './style.css'
 
 function HealthBar({health}) {
 
@@ -35,7 +36,12 @@ function HealthBar({health}) {
 
     return (
         <>
+            <div className="healthbox">
+            <label className="namelabel">NAS-TY</label>
+            <div className="hpbox">
             <StyledHealthBar variant='determinate' value={health}/>
+            </div>
+            </div>
         </>
   )
 }
