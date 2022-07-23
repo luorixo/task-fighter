@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import badgeIcon from "./badge.png";
+import badgeIcon from "./badge.gif";
 
 function EndPage() {
   return (

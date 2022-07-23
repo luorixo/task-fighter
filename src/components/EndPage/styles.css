@@ -10,10 +10,11 @@
   font-size: 4.2vw;
   display: flex;
   padding: 1vw 2vw;
-  background-color: rgba(223, 222, 222, 0.5);
+  background-color: rgba(223, 222, 222, 0.3);
   color: rgb(40, 107, 40);
   border-radius: 5vw;
   margin-bottom: 2vh;
+  width: 50%;
 }
 
 .message-container {
@@ -21,20 +22,19 @@
   flex-direction: column;
   align-items: center;
   padding: 0.5vw 2vw;
-  animation: fade 1.2s infinite;
+  animation: 1.2s fade ease 1.5s infinite;
 }
 
 .badge-icon {
-  background-color: rgba(223, 222, 222, 0.5);
+  background-color: rgba(223, 222, 222, 0.3);
   border-radius: 12.5vw;
   box-sizing: border-box;
-  padding: 3vw;
   height: 25vw;
 }
 
 @keyframes fade {
   0% {
-    opacity: 0.95;
+    opacity: 1;
   }
   10% {
     opacity: 0.9;
@@ -64,17 +64,17 @@
     opacity: 0.85;
   }
   100% {
-    opacity: 0.95;
+    opacity: 1;
   }
 }
 
 .message-container h2 {
   margin: 3vh auto;
-  background-color: rgba(223, 222, 222, 0.5);
+  background-color: rgba(223, 222, 222, 0.3);
   border-radius: 3vw;
   padding: 1vw 1.5vw;
   font-size: 2.5vw;
-  color: rgb(76, 76, 76);
+  color: #fff;
 }
 
 .replay-button {
