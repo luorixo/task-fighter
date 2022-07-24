@@ -6,6 +6,11 @@ import { useState } from "react";
 import LeafParticles from "../Particles/LeafParticles";
 import RainParticles from "../Particles/RainParticles";
 import SmokeParticles from "../Particles/SmokeParticles";
+import nastyIdle from "./images/nasty_idle_1.GIF";
+import nastyDamageOne from "./images/nasty_damage_1.GIF";
+import nastyDamageTwo from "./images/nasty_damage_2.GIF";
+import nastyDamageThree from "./images/nasty_damage_3.GIF";
+import nastyDeath from "./images/nasty_rip.GIF";
 
 function FightPage() {
   // this page is for the fight page screen view.
@@ -83,7 +88,9 @@ function FightPage() {
           <div className="health-div">
             <HealthBar health={health} />
           </div>
-          <div className="monster"></div>
+          <div className="monster-div">
+            <img src={nastyIdle} />
+          </div>
         </div>
       </div>
     </>
