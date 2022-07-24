@@ -14,6 +14,8 @@ import nastyDeath from "./images/nasty_rip.GIF";
 
 import { useNavigate } from "react-router-dom";
 
+
+
 function FightPage() {
   // this page is for the fight page screen view.
   let navigate = useNavigate();
