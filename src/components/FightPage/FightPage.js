@@ -10,11 +10,7 @@ import nastyIdle from "./images/nasty_idle_1.GIF";
 import nastyDamageOne from "./images/nasty_damage_1.GIF";
 import nastyDamageTwo from "./images/nasty_damage_2.GIF";
 import nastyDamageThree from "./images/nasty_damage_3.GIF";
-import nastyDeath from "./images/nasty_rip.GIF";
-
 import { useNavigate } from "react-router-dom";
-
-
 
 function FightPage() {
   // this page is for the fight page screen view.
@@ -44,8 +40,6 @@ function FightPage() {
     } else {
       changeImage(nastyDamageThree);
     }
-
-    // changeImage(nastyIdle);
   }
 
   // decreases health.
