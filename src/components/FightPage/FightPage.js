@@ -1,27 +1,33 @@
-import React from "react";
+import React from 'react'
 import "./styles.css";
-import HealthBar from "./HealthBar/HealthBar";
-import TaskBar from "./TaskBar/TaskBar";
-import { useState } from "react";
+import HealthBar from './HealthBar/HealthBar'
+import TaskBar from './TaskBar/TaskBar'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import LeafParticles from "../Particles/LeafParticles";
 import RainParticles from "../Particles/RainParticles";
 import SmokeParticles from "../Particles/SmokeParticles";
 
 function FightPage() {
-  // this page is for the fight page screen view.
+    // this page is for the fight page screen view.
+    let navigate = useNavigate();
 
   // state variables for healthbar
   const [noFirstTask, setFirstTask] = useState(true);
   const [numOfTasks, setNumOfTasks] = useState(0);
   const [health, setHealth] = useState(100);
 
-  /* START OF FUNCTIONS FOR HEALTHBAR */
-  function CompleteTask() {
-    if (numOfTasks !== 0 && !noFirstTask) {
-      setNumOfTasks(numOfTasks - 1);
-    }
-    Attack(noFirstTask ? 0 : health / numOfTasks);
-  }
+    /* START OF FUNCTIONS FOR HEALTHBAR */
+    function CompleteTask(){
+        if (numOfTasks !== 0 && !noFirstTask){
+            setNumOfTasks(numOfTasks - 1);
+
+            if (numOfTasks === 1){
+                navigate("/win");
+            }
+        } 
+
+        Attack((noFirstTask) ? 0 : (health / numOfTasks));
 
   // decreases health.
   function Attack(inc) {

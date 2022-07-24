@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import badgeIcon from "./badge.gif";
+import { Link } from "react-router-dom";
 
 function EndPage() {
   return (
@@ -13,7 +14,7 @@ function EndPage() {
           <h2>You've earned a new badge!</h2>
         </div>
 
-        <button className="replay-button"> PLAY AGAIN?</button>
+        <Link to="/"><button className="replay-button"> PLAY AGAIN?</button></Link>
       </div>
     </>
   );
