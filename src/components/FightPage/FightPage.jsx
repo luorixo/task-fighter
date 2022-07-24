@@ -84,7 +84,7 @@ function FightPage() {
     <>
       {health > 66 && <LeafParticles />}
 
-      {health < 66 && health > 33 && <RainParticles />}
+      {health < 66 && health > 40 && <RainParticles />}
 
       {health < 40 && <SmokeParticles />}
       <div className="root">
