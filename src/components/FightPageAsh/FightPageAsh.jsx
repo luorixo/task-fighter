@@ -82,7 +82,11 @@ function FightPageAsh() {
 
   return (
     <>
-      <LeafParticles />
+      {health > 66 && <LeafParticles />}
+
+      {health < 66 && health > 33 && <RainParticles />}
+
+      {health < 40 && <SmokeParticles />}
       <div className="root">
         <div className="task-div">
           <TaskBar
