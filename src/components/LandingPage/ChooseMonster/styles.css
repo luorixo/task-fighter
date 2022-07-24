@@ -69,3 +69,7 @@ h1 {
   text-align: center;
   font-size: 6vw;
 }
+
+* {
+  text-decoration: none;
+}

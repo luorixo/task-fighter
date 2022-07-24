@@ -6,6 +6,7 @@ import monsterThree from "./images/monster3.png";
 import monsterOneGIF from "./images/monster1.GIF";
 import monsterTwoGIF from "./images/monster2.GIF";
 import monsterThreeGIF from "./images/monster3.GIF";
+import { Link } from 'react-router-dom'
 
 function ChooseMonster() {
   return (
@@ -13,6 +14,7 @@ function ChooseMonster() {
       <h1>TASKFIGHTER</h1>
 
       <div className="box-container">
+        <Link to="/fight">
         <button className="box-section-1">
           <span className="title">CHOOSE</span>
           <img
@@ -29,6 +31,9 @@ function ChooseMonster() {
           />
           <span className="name">NAS-TY</span>
         </button>
+        </Link>
+
+        <Link to="/fight">
         <button className="box-section-2">
           <span className="title">YOUR</span>
           <img
@@ -45,6 +50,8 @@ function ChooseMonster() {
           />
           <span className="name">ASH-LEIGH</span>
         </button>
+        </Link>
+        <Link to="/fight">
         <button className="box-section-3">
           <span className="title">MONSTER</span>
           <img
@@ -61,6 +68,7 @@ function ChooseMonster() {
           />
           <span className="name">BON-KCO</span>
         </button>
+        </Link>
       </div>
     </>
   );
