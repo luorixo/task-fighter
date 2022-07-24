@@ -4,24 +4,22 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FightPage from "./components/FightPage/FightPage";
+import FightPageAsh from "./components/FightPageAsh/FightPageAsh";
+import FightPageBonk from "./components/FightPageBonk/FightPageBonk";
 import LandingPage from "./components/LandingPage/LandingPage";
 import EndPage from "./components/EndPage/EndPage";
-import nastyDeath from "./images/nasty_rip.GIF";
-import bonkcoDeath from "./images/bonkco_rip.GIF";
-import ashleighDeath from "./images/ashleigh_rip.GIF";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/fight" element={<FightPage />} />
-      <Route path="/nastywin" element={<EndPage deathImage="nastyDeath" />} />
-      <Route
-        path="/ashleighwin"
-        element={<EndPage deathImage="ashleighDeath" />}
-      />
-      <Route path="/bonkcowin" element={<EndPage deathImage="bonkcoDeath" />} />
+      <Route path="/fightnasty" element={<FightPage />} />
+      <Route path="/fightbonk" element={<FightPageBonk />} />
+      <Route path="/fightash" element={<FightPageAsh />} />
+      <Route path="/nastywin" element={<EndPage deathImage={1} />} />
+      <Route path="/ashwin" element={<EndPage deathImage={2} />} />
+      <Route path="/bonkwin" element={<EndPage deathImage={3} />} />
     </Routes>
   </BrowserRouter>
 );

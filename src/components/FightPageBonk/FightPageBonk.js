@@ -6,13 +6,13 @@ import { useState } from "react";
 import LeafParticles from "../Particles/LeafParticles";
 import RainParticles from "../Particles/RainParticles";
 import SmokeParticles from "../Particles/SmokeParticles";
-import nastyIdle from "./images/nasty_idle_1.GIF";
-import nastyDamageOne from "./images/nasty_damage_1.GIF";
-import nastyDamageTwo from "./images/nasty_damage_2.GIF";
-import nastyDamageThree from "./images/nasty_damage_3.GIF";
+import bonkcoIdle from "./images/bonkco_idle_1.GIF";
+import bonkcoDamageOne from "./images/bonkco_damage_1.GIF";
+import bonkcoDamageTwo from "./images/bonkco_damage_2.GIF";
+import bonkcoDamageThree from "./images/bonkco_damage_3.GIF";
 import { useNavigate } from "react-router-dom";
 
-function FightPage() {
+function FightPageBonk() {
   // this page is for the fight page screen view.
   let navigate = useNavigate();
 
@@ -20,7 +20,7 @@ function FightPage() {
   const [noFirstTask, setFirstTask] = useState(true);
   const [numOfTasks, setNumOfTasks] = useState(0);
   const [health, setHealth] = useState(100);
-  const [idleImage, changeImage] = useState(nastyIdle);
+  const [idleImage, changeImage] = useState(bonkcoIdle);
 
   /* START OF FUNCTIONS FOR HEALTHBAR */
   function CompleteTask() {
@@ -28,17 +28,17 @@ function FightPage() {
       setNumOfTasks(numOfTasks - 1);
 
       if (numOfTasks === 1) {
-        navigate("/nastywin");
+        navigate("/bonkwin");
       }
     }
     Attack(noFirstTask ? 0 : health / numOfTasks);
 
     if (numOfTasks < 3) {
-      changeImage(nastyDamageOne);
+      changeImage(bonkcoDamageOne);
     } else if (numOfTasks < 5) {
-      changeImage(nastyDamageTwo);
+      changeImage(bonkcoDamageTwo);
     } else {
-      changeImage(nastyDamageThree);
+      changeImage(bonkcoDamageThree);
     }
   }
 
@@ -111,4 +111,4 @@ function FightPage() {
   );
 }
 
-export default FightPage;
+export default FightPageBonk;

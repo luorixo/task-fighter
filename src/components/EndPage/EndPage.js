@@ -8,12 +8,14 @@ import ashleighDeath from "./images/ashleigh_rip.GIF";
 
 function EndPage(deathImage) {
   function getImage() {
-    if (deathImage === "nastyDeath") {
+    if (deathImage === 1) {
       return <img className="badge-icon" src={nastyDeath}></img>;
-    } else if (deathImage === "bonkcoDeath") {
+    } else if (deathImage === 2) {
       return <img className="badge-icon" src={bonkcoDeath}></img>;
-    } else {
+    } else if (deathImage === 3) {
       return <img className="badge-icon" src={ashleighDeath}></img>;
+    } else {
+      return <img className="badge-icon" src={nastyDeath}></img>;
     }
   }
 

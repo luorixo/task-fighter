@@ -6,7 +6,7 @@ import monsterThree from "./images/monster3.png";
 import monsterOneGIF from "./images/monster1.GIF";
 import monsterTwoGIF from "./images/monster2.GIF";
 import monsterThreeGIF from "./images/monster3.GIF";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function ChooseMonster() {
   return (
@@ -14,60 +14,60 @@ function ChooseMonster() {
       <h1>TASKFIGHTER</h1>
 
       <div className="box-container">
-        <Link to="/fight">
-        <button className="box-section-1">
-          <span className="title">CHOOSE</span>
-          <img
-            className="monster-image"
-            id="monster-1"
-            src={monsterOne}
-            alt=""
-          />
-          <img
-            className="monster-gif"
-            id="monster-1-gif"
-            src={monsterOneGIF}
-            alt=""
-          />
-          <span className="name">NAS-TY</span>
-        </button>
+        <Link to="/fightnasty">
+          <button className="box-section-1">
+            <span className="title">CHOOSE</span>
+            <img
+              className="monster-image"
+              id="monster-1"
+              src={monsterOne}
+              alt=""
+            />
+            <img
+              className="monster-gif"
+              id="monster-1-gif"
+              src={monsterOneGIF}
+              alt=""
+            />
+            <span className="name">NAS-TY</span>
+          </button>
         </Link>
 
-        <Link to="/fight">
-        <button className="box-section-2">
-          <span className="title">YOUR</span>
-          <img
-            className="monster-image"
-            id="monster-2"
-            src={monsterTwo}
-            alt=""
-          />
-          <img
-            className="monster-gif"
-            id="monster-2-gif"
-            src={monsterTwoGIF}
-            alt=""
-          />
-          <span className="name">ASH-LEIGH</span>
-        </button>
+        <Link to="/fightash">
+          <button className="box-section-2">
+            <span className="title">YOUR</span>
+            <img
+              className="monster-image"
+              id="monster-2"
+              src={monsterTwo}
+              alt=""
+            />
+            <img
+              className="monster-gif"
+              id="monster-2-gif"
+              src={monsterTwoGIF}
+              alt=""
+            />
+            <span className="name">ASH-LEIGH</span>
+          </button>
         </Link>
-        <Link to="/fight">
-        <button className="box-section-3">
-          <span className="title">MONSTER</span>
-          <img
-            className="monster-image"
-            id="monster-3"
-            src={monsterThree}
-            alt=""
-          />
-          <img
-            className="monster-gif"
-            id="monster-3-gif"
-            src={monsterThreeGIF}
-            alt=""
-          />
-          <span className="name">BON-KCO</span>
-        </button>
+        <Link to="/fightbonk">
+          <button className="box-section-3">
+            <span className="title">MONSTER</span>
+            <img
+              className="monster-image"
+              id="monster-3"
+              src={monsterThree}
+              alt=""
+            />
+            <img
+              className="monster-gif"
+              id="monster-3-gif"
+              src={monsterThreeGIF}
+              alt=""
+            />
+            <span className="name">BON-KCO</span>
+          </button>
         </Link>
       </div>
     </>
