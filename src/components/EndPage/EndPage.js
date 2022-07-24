@@ -2,10 +2,12 @@ import React from "react";
 import "./styles.css";
 import badgeIcon from "./badge.gif";
 import { Link } from 'react-router-dom';
+import LeafParticles from '../Particles/LeafParticles';
 
 function EndPage() {
   return (
     <>
+    <LeafParticles/>
       <div className="text-container">
         <h1 className="header">CONGRATULATIONS, YOU SLAYED!</h1>
 
