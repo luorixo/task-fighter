@@ -3,6 +3,8 @@ import HealthBar from './HealthBar/HealthBar'
 import TaskBar from './TaskBar/TaskBar'
 import { useState } from 'react';
 
+
+
 function FightPage() {
     // this page is for the fight page screen view.
 
