@@ -1,40 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Montserrat:wght@700&display=swap");
+
 .healthbox {
-    background-color: #F8EAC7;
-    width: 62vw;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    border: 2px solid #D2C6A9;
+  background-color: #f8eac7;
+  width: 30vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.5);
+  padding-bottom: 0.5rem;
 }
 
 .namelabel {
-    margin-top: 0.3rem;
-    margin-bottom: 0.2rem;
-    width: 59vw;
-    font-size: 12px;
-    font-weight: 700;
-    color: #333;
+  font-family: "Baloo 2", cursive;
+  margin-top: 0.3rem;
+  margin-bottom: -0.2rem;
+  width: 10vw;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
 }
 
 .hpbox {
-    height: 2.5vh;
-    width: 60vw;
-    padding: none;
-    background-color: #C5E5CD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 0.3rem;
+  height: 2.5vh;
+  width: 28vw;
+  padding: 0.3rem;
+  background-color: #c5e5cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 0.3rem 0.6rem;
 }
 
 .hpbox::before {
-    color: #333;
-    content: "HP";
-    font-size: 10px;
-    font-weight: 800;
-    margin-right: 0.18rem;
+  color: #333;
+  content: "HP";
+  font-family: "Baloo 2", cursive;
+  font-size: 15px;
+  font-weight: 800;
+  margin-right: 0.18rem;
 }

@@ -1,181 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Montserrat:wght@700&display=swap");
 
-  *{
-    margin: 0px;
-    padding: 0px;
-}   
-  header {
-    font-size: 2rem;
-  }
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  font-size: 2rem;
+}
 
-  .navbar {
-    position: fixed;
-    transition: width 600ms ease;
-    overflow: scroll;
-    height: 100%;
-    padding-left: 1rem;
-  }
+.navbar {
+  position: fixed;
+  transition: width 600ms ease;
+  overflow: hidden;
+  height: 100%;
+  padding-left: 1rem;
+}
 
-  header,
-  form {
-    display: flex;
-    align-items: center;
+header,
+form {
+  display: flex;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  border: none;
+  background: #d2c2a9;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.5);
+  color: #3c250d;
+}
 
-    
-  }
-  form input,
-  form button {
-    padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background: dodgerblue;
-    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.5);
-  }
-  form button {
-    color: dodgerblue;
-    background: #f7fffe;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-  }
-  form button:hover {
-    background: dodgerblue;
-    color: white;
-  }
-  .todo-container {
-    align-items: center;
-  }
-  
-  .todo-list {
-    min-width: 30%;
-    list-style: none;
-  }
+input:focus {
+  outline: none;
+}
 
-  
-  .todo {
-    margin: 2.7rem 2rem;
-    background: dodgerblue;;
-    font-size: 1.5rem;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 1s ease;
-    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.5);
-  }
-  .filter-todo {
-    padding: 1rem;
-  }
-  .todo li {
-    flex: 1;
-  }
-  
-  .trash-btn,
-  .complete-btn {
-    background: dodgerblue;;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  .complete-btn {
-    background: rgb(11, 212, 162);
-  }
-  .todo-item {
-    padding: 0rem 0.5rem;
-  }
-  
-  .fa-trash,
-  .fa-check {
-    pointer-events: none;
-  }
-  
-  .fall {
-    transform: translateY(10rem) rotateZ(20deg);
-    opacity: 0;
-  }
-  
-  .completed {
-    text-decoration: line-through;
-    opacity: 0.5;
-    display: none;
-  }
-  
-  
+form button {
+  color: #ffa645;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #ffa645;
+  color: white;
+}
+.todo-container {
+  align-items: center;
+}
 
-  li:hover{
-    color: white;
-  }
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
 
-  .side{
-    margin: 2rem;
-  }
+.todo {
+  margin: 2.7rem 2rem;
+  background: #d2c2a9;
+  font-size: 1.5rem;
+  color: #3c250d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.5);
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  font-family: "Montserrat", sans-serif;
+  color: #3c250d;
+  flex: 1;
+  padding-left: 1rem;
+}
 
-  form{
-    margin-bottom: 6rem;
-  }
+.trash-btn,
+.complete-btn {
+  background: #d2c2a9;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: #ffa645;
+  color: #fff;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
 
-  form, ul{
-    margin-top: 5rem;
-    position: relative;
-    transform: skewY(-15deg);
-  }
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
 
-form::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -40px;
-    width: 40px;
-    height: 100%;
-    background: dodgerblue;
-    border-radius: 1px;
-    transform-origin: right;
-    transform: skewY(45deg);
-    transition:  0.5s;
-  }
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
 
-  form::after{
-    content: "";
-    position: absolute;
-    top:-40px;
-    width: 100%;
-    height: 40px;
-    background: rgb(117, 162, 208);
-    left: 0;
-    transform-origin: bottom;
-    transform: skewX(45deg);
-  }
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  display: none;
+}
 
-  .todo::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -40px;
-    width: 40px;
-    height: 100%;
-    background: dodgerblue;
-    border-radius: 1px;
-    transform-origin: right;
-    transform: skewY(45deg);
-    transition:  0.5s;
-  }
+li:hover {
+  color: white;
+}
 
-  .todo::after{
-    content: "";
-    position: absolute;
-    top:-40px;
-    width: 100%;
-    height: 40px;
-    background: rgb(117, 162, 208);
-    left: 0;
-    transform-origin: bottom;
-    transform: skewX(45deg);
-  }
-  
+.side {
+  margin: 2rem;
+}
 
+form {
+  margin-bottom: 6rem;
+}
 
+form,
+ul {
+  margin-top: 5rem;
+  position: relative;
+  transform: skewY(-15deg);
+}
 
+form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #b5a792;
+  border-radius: 1px;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
 
+form::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: 40px;
+  background: #c2b39b;
+  left: 0;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+}
 
-  
+.todo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #b5a792;
+  border-radius: 1px;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+.todo::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: 40px;
+  background: #c2b39b;
+  left: 0;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+}
