@@ -14,6 +14,9 @@ root.render(
       <Route path="/" element={<LandingPage />} />
       <Route path="/fight" element={<FightPage />} />
       <Route path="/win" element={<EndPage />} />
+      <Route path="/nas-ty" element={<FightPage />} />
+      <Route path="/ash-leigh" element={<FightPage />} />
+      <Route path="/bon-kco" element={<FightPage />} />
     </Routes>
   </BrowserRouter>
 );
