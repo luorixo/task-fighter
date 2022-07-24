@@ -12,8 +12,11 @@ import nastyDamageTwo from "./images/nasty_damage_2.GIF";
 import nastyDamageThree from "./images/nasty_damage_3.GIF";
 import nastyDeath from "./images/nasty_rip.GIF";
 
+import { useNavigate } from 'react-router-dom'
+
 function FightPage() {
   // this page is for the fight page screen view.
+  let navigate = useNavigate();
 
   // state variables for healthbar
   const [noFirstTask, setFirstTask] = useState(true);
@@ -24,6 +27,10 @@ function FightPage() {
   function CompleteTask() {
     if (numOfTasks !== 0 && !noFirstTask) {
       setNumOfTasks(numOfTasks - 1);
+
+      if (numOfTasks === 1){
+        navigate("/win");
+    }
     }
     Attack(noFirstTask ? 0 : health / numOfTasks);
   }
