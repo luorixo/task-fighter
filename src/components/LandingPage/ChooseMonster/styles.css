@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Montserrat:wght@700&display=swap');
+
 .box-container {
   display: flex;
   justify-content: space-between;
@@ -55,19 +58,22 @@
   font-size: 4vw;
   font-weight: 600;
   color: rgb(71, 71, 71);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Baloo 2', cursive;
 }
 
 .name {
   margin-top: 10px;
   font-size: 1.5vw;
   font-weight: 400;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
   text-align: center;
   font-size: 6vw;
+  font-family: 'Baloo 2', cursive;
+  color: rgb(91, 107, 85);
 }
 
 * {
