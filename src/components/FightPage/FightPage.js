@@ -2,9 +2,11 @@ import React from 'react'
 import HealthBar from './HealthBar/HealthBar'
 import TaskBar from './TaskBar/TaskBar'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function FightPage() {
     // this page is for the fight page screen view.
+    let navigate = useNavigate();
 
     // state variables for healthbar
     const [noFirstTask, setFirstTask] = useState(true);
@@ -15,7 +17,12 @@ function FightPage() {
     function CompleteTask(){
         if (numOfTasks !== 0 && !noFirstTask){
             setNumOfTasks(numOfTasks - 1);
-        }
+
+            if (numOfTasks === 1){
+                navigate("/win");
+            }
+        } 
+
         Attack((noFirstTask) ? 0 : (health / numOfTasks));
     }
 
