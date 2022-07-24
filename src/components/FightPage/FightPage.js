@@ -12,7 +12,7 @@ import nastyDamageTwo from "./images/nasty_damage_2.GIF";
 import nastyDamageThree from "./images/nasty_damage_3.GIF";
 import nastyDeath from "./images/nasty_rip.GIF";
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 function FightPage() {
   // this page is for the fight page screen view.
@@ -22,17 +22,28 @@ function FightPage() {
   const [noFirstTask, setFirstTask] = useState(true);
   const [numOfTasks, setNumOfTasks] = useState(0);
   const [health, setHealth] = useState(100);
+  const [idleImage, changeImage] = useState(nastyIdle);
 
   /* START OF FUNCTIONS FOR HEALTHBAR */
   function CompleteTask() {
     if (numOfTasks !== 0 && !noFirstTask) {
       setNumOfTasks(numOfTasks - 1);
 
-      if (numOfTasks === 1){
+      if (numOfTasks === 1) {
         navigate("/win");
-    }
+      }
     }
     Attack(noFirstTask ? 0 : health / numOfTasks);
+
+    if (numOfTasks < 3) {
+      changeImage(nastyDamageOne);
+    } else if (numOfTasks < 5) {
+      changeImage(nastyDamageTwo);
+    } else {
+      changeImage(nastyDamageThree);
+    }
+
+    // changeImage(nastyIdle);
   }
 
   // decreases health.
@@ -96,7 +107,7 @@ function FightPage() {
             <HealthBar health={health} />
           </div>
           <div className="monster-div">
-            <img src={nastyIdle} />
+            <img src={idleImage} />
           </div>
         </div>
       </div>
