@@ -1,4 +1,6 @@
 .root {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,6 +14,7 @@
 }
 
 .task-div {
+  display: flex;
   margin-left: 2.5rem;
   margin-bottom: 1rem;
   margin-top: -50rem;
