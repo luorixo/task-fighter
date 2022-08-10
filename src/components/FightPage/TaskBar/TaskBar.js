@@ -13,7 +13,7 @@ function TaskBar({inputText, inputTextHandler, submitTodoHandler, todos, setTodo
       animate={{y:20}}
       transition={{delay: 0.1, type: "spring", stiffness: 400}}>
       <form>
-          <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input"/>
+          <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" maxLength={30}/>
           <motion.button onClick={submitTodoHandler} className="todo-button" type="submit">
             <motion.i className="fas fa-plus-square"
             whileHover={{textShadow: "0px 0px 8px rgb(255,255,255"}}></motion.i>
