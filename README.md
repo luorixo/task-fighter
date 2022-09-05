@@ -3,7 +3,7 @@ Task Fighter is a web-based app built on React, utilising custom Framer Motion a
 In it, you are presented with 3 different monsters to fight!
 Just create your to-do-list; set your timer; get to monster fighting!
 
-**All assets (sprite art, animations, backgrounds) are all custom made by our 2 design student team members!**
+**Our assets (sprite art, animations, backgrounds) are all custom made by our 2 design student team members!**
 
 **Some of the custom art:**
 <img src="https://github.com/luorixo/task-fighter/blob/main/src/components/LandingPage/images/background1.JPG?raw=true"/>
