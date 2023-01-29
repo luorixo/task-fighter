@@ -14,3 +14,7 @@ Just create your to-do-list; set your timer; get to monster fighting!
 <img src="https://github.com/luorixo/task-fighter/blob/main/src/components/FightPage/images/nasty_damage_2.GIF?raw=true"/>
 <img src="https://github.com/luorixo/task-fighter/blob/main/src/components/FightPageAsh/images/ashleigh_damage_3.GIF?raw=true"/>
 <img src="https://github.com/luorixo/task-fighter/blob/main/src/components/FightPage/images/nasty_damage_3.GIF?raw=true"/>
+
+***Art By:***
+- Caitlin Pillay
+- Vanisha Rajan
